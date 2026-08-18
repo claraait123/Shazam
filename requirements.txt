@@ -1,0 +1,45 @@
+# Direct dependencies only.
+# Transitive dependencies are left to pip's resolver so the environment stays
+# easier to upgrade and less brittle across machines.
+#
+# System dependencies installed separately (not via pip):
+# - ffmpeg
+# - Node.js / npm (frontend + `python manage.py webapp`)
+
+# Core data / audio processing
+numpy>=1.26,<2
+scipy>=1.13,<2
+pandas>=2.2,<3
+pyarrow>=14,<21
+librosa>=0.10,<1
+soundfile>=0.12,<1
+pyloudnorm>=0.1,<1
+noisereduce>=3,<4
+imageio-ffmpeg>=0.5,<1
+
+# Retrieval / embeddings
+faiss-cpu>=1.8,<2
+chromadb>=0.5,<2
+# `transformers` now requires torch>=2.6 for safe model loading after CVE-2025-32434.
+torch>=2.6,<2.8
+torchaudio>=2.6,<2.8
+transformers>=4.41,<5
+einops>=0.8,<1
+easydict>=1.13,<2
+nnAudio>=0.3,<1
+tqdm>=4.66,<5
+x-clip>=0.14,<1
+muq @ git+https://github.com/tencent-ailab/MuQ.git@28847ea50cd31ac4b8b6a7dacc051ad7d1c7606a
+
+# CLI / backend / integrations
+click>=8.1,<9
+rich>=13,<15
+requests>=2.31,<3
+kaggle>=1.6,<2
+yt-dlp>=2024.8.6
+fastapi>=0.111,<1
+uvicorn[standard]>=0.29,<1
+python-multipart>=0.0.9,<1
+
+# Evaluation / reporting
+matplotlib>=3.8,<4
