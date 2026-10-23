@@ -18,7 +18,7 @@
 ![MuQ](https://img.shields.io/badge/MuQ-OpenMuQ-blueviolet)
 ![License](https://img.shields.io/badge/License-Master_IAD-lightgrey)
 
-A music recognition system inspired by Shazam, developed as part of a Big Data project (Master IAD, S2). Given an audio clip captured from a microphone or uploaded as a file, the system identifies the matching track from a database of several hundred titles and displays streaming links.
+A music recognition system inspired by Shazam, developed as part of a Big Data project (Master VMI, S2). Given an audio clip captured from a microphone or uploaded as a file, the system identifies the matching track from a database of several hundred titles and displays streaming links.
 
 The approach combines the power of deep learning embeddings (FAISS vector search) with spectral fingerprinting inspired by the original Shazam patent, forming a hybrid two-stage pipeline that remains robust against noise, reverberation, and short audio clips.
 
